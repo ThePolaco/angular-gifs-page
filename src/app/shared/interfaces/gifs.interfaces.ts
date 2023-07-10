@@ -25,7 +25,7 @@ export interface Gifs {
     images:                     Images;
     analytics_response_payload: string;
     analytics:                  Analytics;
-    user?:                      User;
+    user:                      User;
 }
 
 export interface Analytics {

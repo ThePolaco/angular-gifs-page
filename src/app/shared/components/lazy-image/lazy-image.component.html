@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center">
+    <!-- evento onload es algo que se ejecuta cuando se empieza a cargar la imagen -->
+    <!-- con el NgStyle indicamos los estilos que queremos cambiar en este caso es el diplay -->
+    <img 
+    [src]="url"
+    [alt]="alt"
+    class="card-img-top animate__animated animate__bounce"
+    (load)="onLoad()" 
+    [ngStyle]="{ display: hasLoaded ? '': 'none'}"
+    />
+
+    <img 
+        *ngIf="!hasLoaded"
+        src="assets/loader.svg"
+        highy="35"
+        width="35"
+        class=" mt-3"
+    />
+
+</div>
+
